@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма з кнопкою "Скопіювати"</title>
+    <!-- Підключення Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <form>
+            <div class="form-group">
+                <label for="number">Число: </label>
+                <input type="date" class="form-control" id="myDate" placeholder="00-00-0000" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Ім'я працівника: </label>
+                <input type="text" class="form-control" id="name" placeholder="Приклад П." required>
+            </div>
+            <div class="form-group">
+                <label for="money">Кількість зароблених грошей за зміну: </label>
+                <input type="number" class="form-control" id="money" placeholder="99 злотих" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Час роботи: </label>
+                <input type="range" class="form-control-range" id="timeSlider" min="30" max="480" step="30">
+                <span id="time" class="mt-2 form-control timeDisplay" required>0 хв</span>
+            </div>
+    
+            <!-- Кнопка для копіювання -->
+            <button type="button" class="btn btn-primary" onclick="copyFormData()">Копіювати текст</button>
+        </form>
+        </form>
+    </div>
+    
+    <!-- Підключення Bootstrap JS та залежностей -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Скрипт для копіювання форми -->
+    <script src="app.js"></script>
+</body>
+</html>
